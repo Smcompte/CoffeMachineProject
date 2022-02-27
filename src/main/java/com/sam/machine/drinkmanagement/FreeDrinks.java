@@ -4,7 +4,7 @@ import com.sam.machine.enums.Drink;
 
 public class FreeDrinks {
 
-	public String serveCustomer(String choiceOfCustumer, int nbSugar) {
+	public String serveCustomer(String choiceOfCustomer, int nbSugar) {
 		
 		String drinkCode = null;
 		
@@ -12,7 +12,7 @@ public class FreeDrinks {
 		
 		try {
 			
-			drinkCode = Drink.valueOf(choiceOfCustumer).getDrinkCode();
+			drinkCode = Drink.valueOf(choiceOfCustomer).getDrinkCode();
 
 			if (nbSugar == 0) {
 
@@ -29,7 +29,7 @@ public class FreeDrinks {
 		} catch (Exception e) {
 			
 			if (drinkCode == null) {
-				return forDrinkMaker.append("M:{" + " Unknown drink code : " + choiceOfCustumer+"}").toString();
+				return forDrinkMaker.append("M:{" + " Unknown drink code : " + choiceOfCustomer+"}").toString();
 			} else {
 				return forDrinkMaker.append("M:{" + " Input error : " + e.getMessage() + "}").toString();
 			}

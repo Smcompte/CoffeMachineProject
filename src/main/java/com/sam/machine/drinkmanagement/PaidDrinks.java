@@ -4,7 +4,7 @@ import com.sam.machine.enums.Drink;
 
 public class PaidDrinks {
 	
-	public String serveCustomer(String choiceOfCustumer, int nbSugar, Double moneyIntroduced) {
+	public String serveCustomer(String choiceOfCustomer, int nbSugar, Double moneyIntroduced) {
 		
 		String drinkCode = null;
 		
@@ -12,7 +12,7 @@ public class PaidDrinks {
 		
 		try {
 			
-			Drink selectedDrink = Drink.valueOf(choiceOfCustumer);
+			Drink selectedDrink = Drink.valueOf(choiceOfCustomer);
 			drinkCode = selectedDrink.getDrinkCode();
 			Double drinkPrice = selectedDrink.getPrice();
 			
@@ -40,7 +40,7 @@ public class PaidDrinks {
 		} catch (Exception e) {
 			
 			if (drinkCode == null) {
-				return forDrinkMaker.append("M:{" + " Unknown drink code : " + choiceOfCustumer + "}").toString();
+				return forDrinkMaker.append("M:{" + " Unknown drink code : " + choiceOfCustomer + "}").toString();
 			} else {
 				return forDrinkMaker.append("M:{" + " Input error : " + e.getMessage() + "}").toString();
 			}
