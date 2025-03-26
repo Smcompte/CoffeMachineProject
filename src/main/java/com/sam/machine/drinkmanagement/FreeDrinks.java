@@ -11,6 +11,10 @@ public class FreeDrinks {
 		StringBuffer forDrinkMaker = new StringBuffer();
 		
 		try {
+			// EVOL1
+			if (nbSugar == 0 ) {
+				System.out.println("EVOL1 : drinkCode + \":\" + nbSugar + \":\" +\"0\"");
+			}
 			
 			drinkCode = Drink.valueOf(choiceOfCustomer).getDrinkCode();
 
