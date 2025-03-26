@@ -16,6 +16,11 @@ public class FreeDrinks {
 				System.out.println("EVOL1 : drinkCode + \":\" + nbSugar + \":\" +\"0\"");
 			}
 			
+			// EVOL2
+			if (nbSugar == 0 ) {
+				System.out.println("EVOL2 : drinkCode + \":\" + nbSugar + \":\" +\"0\"");
+			}
+			
 			drinkCode = Drink.valueOf(choiceOfCustomer).getDrinkCode();
 
 			if (nbSugar != 0) {
