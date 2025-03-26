@@ -18,13 +18,13 @@ public class FreeDrinks {
 			
 			drinkCode = Drink.valueOf(choiceOfCustomer).getDrinkCode();
 
-			if (nbSugar == 0) {
-
-				forDrinkMaker.append(drinkCode + ":" + ":");
+			if (nbSugar != 0) {
+				
+				forDrinkMaker.append(drinkCode + ":" + nbSugar + ":" +"0");
 
 			} else {
 
-				forDrinkMaker.append(drinkCode + ":" + nbSugar + ":" +"0");
+				forDrinkMaker.append(drinkCode + ":" + ":");
 			}
 
 			return forDrinkMaker.toString();
